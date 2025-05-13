@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.3" prefHeight="400" prefWidth="800"
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.bdsqltester.scenes.user.UserController">
+    <items>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="8" right="8" bottom="8" left="8" />
+            </padding>
+            <children>
+                <Label text="Assignments" />
+                <ListView fx:id="assignmentList" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+
+        <VBox spacing="8">
+            <padding>
+                <Insets top="8" right="8" bottom="8" left="8" />
+            </padding>
+            <children>
+                <GridPane hgap="10" vgap="8">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="ID:" />
+                        <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" />
+                        <Label text="Name:" GridPane.rowIndex="1" />
+                        <TextField fx:id="nameField" editable="false"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+
+                <Label text="Instructions" />
+                <TextArea fx:id="instructionsField" editable="false" prefHeight="100" />
+
+                <Label text="Your Query" />
+                <TextArea fx:id="userQueryArea" prefHeight="100" />
+
+                <Label fx:id="gradeLabel" text="Score: -" />
+
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <children>
+                        <Button text="Test" onAction="#onTestButtonClick" />
+                        <Button text="Submit" onAction="#onSubmitClick" />
+                    </children>
+                </HBox>
+
+                <TextArea fx:id="answerKeyField" visible="false" managed="false" />
+            </children>
+        </VBox>
+    </items>
+</SplitPane>

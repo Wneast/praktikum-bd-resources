@@ -9,7 +9,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class
+HelloApplication extends Application {
+
+
     private static HelloApplication applicationInstance;
     private Stage primaryStage;
     public static HelloApplication getApplicationInstance () { return applicationInstance; }

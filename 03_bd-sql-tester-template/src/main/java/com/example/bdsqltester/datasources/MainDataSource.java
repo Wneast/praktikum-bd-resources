@@ -12,7 +12,7 @@ public class MainDataSource {
     static {
         config.setJdbcUrl("jdbc:postgresql://localhost:5432/sql-tester");
         config.setUsername("postgres");
-        config.setPassword("postgres");
+        config.setPassword("12345");
         config.addDataSourceProperty("cachePrepStmts", "true");
         config.addDataSourceProperty("prepStmtCacheSize", "250");
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
